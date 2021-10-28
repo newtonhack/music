@@ -1,0 +1,246 @@
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+            margin: 0;
+        }
+
+        #particle-canvas {
+            width: 100%;
+            height: 100vh;
+            background-color: #f1eded;
+            vertical-align: middle;
+        }
+
+        .blue {
+            color: #29b6f6;
+        }
+
+        .green {
+            color: #9ccc65;
+        }
+
+        .purple {
+            color: #ba68c8;
+        }
+
+        .cyan {
+            color: #4dd0e1;
+        }
+
+        .red {
+            color: #ef5350;
+        }
+
+        .content {
+            height: 100vh;
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            perspective: 150rem;
+            height: 20rem;
+            width: 40rem;
+            color: white;
+            position: relative;
+        }
+
+        .card_soundcloud {
+            height: 16rem;
+        }
+
+        .simple-card-soundcloud {
+            height: 14rem;
+            transition: all 0.8s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: auto;
+            width: 40rem;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .simple-card-soundcloud__cont {
+            height: 14rem;
+            background-color: #1c1c1c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card_youtube {
+            height: 30rem;
+        }
+
+        .simple-card-youtube {
+            height: 28rem;
+            transition: all 0.8s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: auto;
+            width: 40rem;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .simple-card-youtube__cont {
+            height: 28rem;
+            background-color: #1c1c1c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card__side {
+            height: 15rem;
+            transition: all 0.8s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: auto;
+            width: 40rem;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .card__side--front {
+            background-color: #1c1c1c;
+        }
+
+        .card__side--back {
+            transform: rotateY(180deg);
+            background-color: #1c1c1c;
+        }
+
+        .card:hover .card__side--front {
+            transform: rotateY(-180deg);
+        }
+
+        .card:hover .card__side--back {
+            transform: rotateY(0deg);
+        }
+
+        .card__cont {
+            height: 15rem;
+            background-color: #1c1c1c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card__cta {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            color: white;
+        }
+
+        .card__cta p {
+            margin-left: 1rem;
+        }
+
+        .card__cta p>.space {
+            margin-left: 2rem;
+        }
+    </style>
+</head>
+
+<body translate="no">
+    <div class="content">
+        <div style="width: 100%;">
+            <div style="width:100%;">
+                <h1 style="margin-left: auto;margin-right: auto; width: 20rem; padding-bottom: 10px;">My Mixes</h1>
+            </div>
+            <div style="overflow:auto;height:90vh;">
+                <div style="margin-left: auto;margin-right: auto;" class="card card_youtube">
+                    <div class="simple-card-youtube">
+                        <!-- Front Content -->
+                        <div class="simple-card-youtube__cont ">
+                            <div>
+                                <div style="margin-left: auto;margin-right: auto; width: 35rem; padding-left: 25px; padding-bottom: 20px;">
+                                    <span class="blue">DJ Anvay</span>
+                                    <span>(<span class="green">'Lockdown @ VMware Edition'</span>)</span>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/SrNVGhAPgig" title="DJ Anvay VMware Edition"
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-left: auto;margin-right: auto;" class="card card_soundcloud">
+                    <div class="simple-card-soundcloud">
+                        <!-- Front Content -->
+                        <div class="simple-card-soundcloud__cont ">
+                            <div>
+                                <div style="margin-left: auto;margin-right: auto; width: 35rem; padding-left: 25px; padding-bottom: 20px;">
+                                    <span class="blue">DJ Anvay</span>
+                                    <span>(<span class="green">'December 2014 Edition'</span>)</span>
+                                </div>
+                                <iframe width="100%" height="130" scrolling="no" frameborder="no" allow="autoplay"
+                                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1149833077&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-left: auto;margin-right: auto;" class="card card_soundcloud">
+                    <div class="simple-card-soundcloud">
+                        <!-- Front Content -->
+                        <div class="simple-card-soundcloud__cont ">
+                            <div>
+                                <div style="margin-left: auto;margin-right: auto; width: 35rem; padding-left: 25px; padding-bottom: 20px;">
+                                    <span class="blue">DJ Anvay</span>
+                                    <span>(<span class="green">'Januray 2015 Edition'</span>)</span>
+                                </div>
+                                <iframe width="100%" height="130" scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/611448714&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-left: auto;margin-right: auto;" class="card card_soundcloud">
+                    <div class="simple-card-soundcloud">
+                        <!-- Front Content -->
+                        <div class="simple-card-soundcloud__cont ">
+                            <div>
+                                <div style="margin-left: auto;margin-right: auto; width: 35rem; padding-left: 25px; padding-bottom: 20px;">
+                                    <span class="blue">DJ Anvay</span>
+                                    <span>(<span class="green">'Valentine Edition'</span>)</span>
+                                </div>
+                                <iframe width="100%" height="130" scrolling="no" frameborder="no" allow="autoplay"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/412045524&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+</iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <canvas id="particle-canvas"></canvas>
+    <script src="js/particle.js">
+    </script>
+</body>
+
+</html>
