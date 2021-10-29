@@ -164,7 +164,7 @@
 
         .floating-box {
             float: left;
-            margin-top:10px;
+            margin-top: 10px;
             background-color: #333;
             width: 21px;
             color: white;
@@ -174,8 +174,24 @@
             padding-top: 10px;
             padding-bottom: 10px;
         }
+
+        .footer {
+            z-index: 100;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            /* no underline */
+        }
     </style>
-     <title>DJ Mixes</title>
+    <title>DJ Mixes</title>
 </head>
 
 <body translate="no">
@@ -184,8 +200,25 @@
             <div style="width:100%;">
                 <!-- <h1 style="margin-left: auto;margin-right: auto; width: 20rem; padding-bottom: 10px;">My Mixes</h1> -->
             </div>
-            <div class="floating-box">DJ Mixes</div>
+            <div class="floating-box"><a href="https://anvay.dev"> DJ Mixes</a></div>
             <div style="overflow:auto;height:calc(100vh - 42px); padding-top: 20px;padding-bottom:20px">
+                <div style="margin-left: auto;margin-right: auto;" class="card card_soundcloud">
+                    <div class="simple-card-soundcloud">
+                        <!-- Front Content -->
+                        <div class="simple-card-soundcloud__cont ">
+                            <div>
+                                <div
+                                    style="margin-left: auto;margin-right: auto; width: 35rem; padding-left: 25px; padding-bottom: 20px;">
+                                    <span class="blue">DJ Anvay</span>
+                                    <span>(<span class="green">'June 2021 Edition'</span>)</span>
+                                </div>
+                                <iframe width="100%" height="130" scrolling="no" frameborder="no" allow="autoplay"
+                                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1149833077&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div style="margin-left: auto;margin-right: auto;" class="card card_youtube">
                     <div class="simple-card-youtube">
                         <!-- Front Content -->
@@ -204,23 +237,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="margin-left: auto;margin-right: auto;" class="card card_soundcloud">
-                    <div class="simple-card-soundcloud">
-                        <!-- Front Content -->
-                        <div class="simple-card-soundcloud__cont ">
-                            <div>
-                                <div
-                                    style="margin-left: auto;margin-right: auto; width: 35rem; padding-left: 25px; padding-bottom: 20px;">
-                                    <span class="blue">DJ Anvay</span>
-                                    <span>(<span class="green">'December 2014 Edition'</span>)</span>
-                                </div>
-                                <iframe width="100%" height="130" scrolling="no" frameborder="no" allow="autoplay"
-                                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1149833077&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-                                </iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <div style="margin-left: auto;margin-right: auto;" class="card card_soundcloud">
                     <div class="simple-card-soundcloud">
                         <!-- Front Content -->
@@ -246,7 +263,7 @@
                                 <div
                                     style="margin-left: auto;margin-right: auto; width: 35rem; padding-left: 25px; padding-bottom: 20px;">
                                     <span class="blue">DJ Anvay</span>
-                                    <span>(<span class="green">'Valentine Edition'</span>)</span>
+                                    <span>(<span class="green">'Valentine 2015 Edition'</span>)</span>
                                 </div>
                                 <iframe width="100%" height="130" scrolling="no" frameborder="no" allow="autoplay"
                                     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/412045524&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
@@ -255,6 +272,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="footer">
+                <p>Page in under construction</p>
             </div>
         </div>
     </div>
