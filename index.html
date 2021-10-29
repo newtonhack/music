@@ -178,17 +178,26 @@
         .footer {
             z-index: 100;
             position: fixed;
-            left: 0;
-            bottom: 0;
-            background-color: red;
+            left: 5;
+            bottom: 10;
+            background-color: rgb(220, 215, 215);
             color: white;
             text-align: center;
+            padding-left: 5px;
         }
 
         a {
             color: #fff;
             text-decoration: none;
             /* no underline */
+        }
+        .home{
+            z-index: 100;
+            position: fixed;
+            left: 5;
+            top: 40%;
+            text-align: center;
+            padding-left: 5px;
         }
     </style>
     <title>DJ Mixes</title>
@@ -201,6 +210,11 @@
                 <!-- <h1 style="margin-left: auto;margin-right: auto; width: 20rem; padding-bottom: 10px;">My Mixes</h1> -->
             </div>
             <div class="floating-box"><a href="https://anvay.dev"> DJ Mixes</a></div>
+            <div class="home">
+                <a href="https://anvay.dev" style="color: rgb(73, 73, 215);" target="_blank">
+                    <img src="https://img.icons8.com/office/40/000000/home--v1.png"/>
+                </a>
+            </div>
             <div style="overflow:auto;height:calc(100vh - 42px); padding-top: 20px;padding-bottom:20px">
                 <div style="margin-left: auto;margin-right: auto;" class="card card_soundcloud">
                     <div class="simple-card-soundcloud">
@@ -274,7 +288,7 @@
                 </div>
             </div>
             <div class="footer">
-                <p>Page in under construction</p>
+                <p><a href="https://anvay.dev" style="color: rgb(73, 73, 215);">Page under construction</a></p>
             </div>
         </div>
     </div>
